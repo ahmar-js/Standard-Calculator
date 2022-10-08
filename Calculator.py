@@ -2,14 +2,31 @@
 # Created on 8 oct 2022
 
 import math as mt
-from BasicCalculator import BasicCalc
+
+
+class BasicCalc:
+    def __init__(self, num1, num2):
+        self.first = num1
+        self.second = num2
+
+    def addition(self):
+        return self.first + self.second
+
+    def subtraction(self):
+        return self.first - self.second
+
+    def multiplication(self):
+        return self.first * self.second
+
+    def division(self):
+        return self.first / self.second
 
 
 class SecondaryCalc(BasicCalc):
     def __init__(self, first, second):
         self.first = first
         self.second = second
-
+        
     def factorial(self):
         return mt.factorial(self.first), mt.factorial(self.second)
 
